@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - DontDestroy
   - Destroy
+  - PlayerStats
   layers:
   - Default
   - TransparentFX

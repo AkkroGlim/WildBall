@@ -11,7 +11,7 @@ public class DeathScr : MonoBehaviour
     private void Awake()
     {
         mainMenu = GameObject.Find("GameMenu");
-        restartMenu = mainMenu.transform.GetChild(3);
+        restartMenu = mainMenu.transform.GetChild(2);
     }
 
     private void Update()

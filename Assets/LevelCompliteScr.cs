@@ -14,10 +14,14 @@ public class LevelCompliteScr : MonoBehaviour
             Time.timeScale = 0;
             compliteMenu.SetActive(true);
         }
+        
     }
+
+
 
     public void restart()
-    {
+    { }
 
     }
-}
+
+
