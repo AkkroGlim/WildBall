@@ -1,17 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 
 public class CoinCollision : MonoBehaviour
 {
     [SerializeField] private Animator coinAnimator;
-
+    public LevelCompliteScr levelComplite;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player"))
         {
             coinAnimator.SetBool("isTouched", true);
+            levelComplite.takeCoin();
             StartCoroutine("destroyer");
         }
     }

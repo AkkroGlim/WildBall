@@ -3480,6 +3480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: levelComplite
+      value: 
+      objectReference: {fileID: 1265459497}
     - target: {fileID: 7811039334947024806, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3997,6 +4001,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 302676131}
     m_Modifications:
+    - target: {fileID: 2024514461913307604, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1265459497}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelCompliteScr, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024514461913307607, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2024514462865709224, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -4017,6 +4053,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2024514462865709227, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808610913417302153, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808610913577760801, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808610914073774801, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808610914228886960, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808610914504600744, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b5c070efcf3d86044b8c59cf5cbf59cd, type: 3}
     - target: {fileID: 7808610914504600746, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
       propertyPath: m_Name
       value: CompliteMenu
@@ -4109,8 +4169,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7808610914938404250, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808610915217727170, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931412597247255808, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_Text
+      value: 4 / 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931412597247255808, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931412597247255808, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931412597247255808, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931412597247255808, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+--- !u!114 &1255365527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8931412597247255808, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
+  m_PrefabInstance: {fileID: 1255365526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1255794807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
@@ -4184,6 +4283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compliteMenu: {fileID: 423775805}
+  coinCountText: {fileID: 1255365527}
 --- !u!4 &1278380044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8dfd7de6b70b685459d0b1ca4e91dca1, type: 3}
@@ -5849,6 +5949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: levelComplite
+      value: 
+      objectReference: {fileID: 1265459497}
     - target: {fileID: 7811039334947024806, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7450,6 +7554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: levelComplite
+      value: 
+      objectReference: {fileID: 1265459497}
     - target: {fileID: 7811039334947024806, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8884,6 +8992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: levelComplite
+      value: 
+      objectReference: {fileID: 1265459497}
     - target: {fileID: 7776832132419061252, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
