@@ -8,15 +8,19 @@ public class LevelCompliteScr : MonoBehaviour
 {
     [SerializeField] private GameObject compliteMenu;
     [SerializeField] private Text coinCountText;
-    private int timeCount; // пофиксь баг с меню и рестартом
+    [SerializeField] private Text timerText;
+    [SerializeField] private Text tryCountText;
+    [SerializeField] private DeathScr deathscr;
+    private float timeCount;
     private int tryCount;
     private int coinCount;
 
-    public void Awake()
+    public void Update()
     {
-        timeCount = 0;
-        tryCount = 0;
-        coinCount = 0;
+        if (deathscr.Restart())
+        {
+            coinCount = 0;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,8 +30,12 @@ public class LevelCompliteScr : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             Time.timeScale = 0;
+            tryCount = deathscr.GetTry();
+            timeCount = deathscr.GetTime();
             compliteMenu.SetActive(true);
             coinCountText.text = coinCount + " / 4";
+            timerText.text = timeCount.ToString();
+            tryCountText.text = tryCount.ToString();
         }
 
     }
@@ -37,16 +45,32 @@ public class LevelCompliteScr : MonoBehaviour
         coinCount++;
     }
 
+    public void NullCoin()
+    {
+        coinCount = 0;
+    }
     public void restart()
     {
-        
+
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
+        deathscr.NullDeathCount();
+        coinCount = 0;
+        timeCount = 0;
+        tryCount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void ToMenu()
+    {
+        Time.timeScale = 1;
+        deathscr.NullDeathCount();
+        coinCount = 0;
+        timeCount = 0;
+        tryCount = 0;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
 
 

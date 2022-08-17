@@ -4516,6 +4516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escMenu: {fileID: 8115961575762184629}
+  deathMenu: {fileID: 8115961575664406031}
 --- !u!1001 &8983010167066980189
 PrefabInstance:
   m_ObjectHideFlags: 0

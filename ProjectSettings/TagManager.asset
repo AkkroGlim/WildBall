@@ -9,6 +9,8 @@ TagManager:
   - DontDestroy
   - Destroy
   - PlayerStats
+  - CompliteMenu
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX
