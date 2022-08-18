@@ -6,7 +6,7 @@ using UnityEngine;
 public class CoinCollision : MonoBehaviour
 {
     [SerializeField] private Animator coinAnimator;
-    public LevelCompliteScr levelComplite;
+    [SerializeField] private LevelCompliteScr levelComplite;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player"))

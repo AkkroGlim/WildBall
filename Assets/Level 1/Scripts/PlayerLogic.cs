@@ -70,7 +70,6 @@ public class PlayerLogic : MonoBehaviour
     {      
         if (isJump && isGrounded)
         {
-            Debug.Log("Prig");
             isJump = false;           
             player.AddForce(new Vector3(0f, jumpForce, 0f) * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);           
         }
