@@ -42,8 +42,7 @@ public class EscMenu : MonoBehaviour
             {
                 if (!deathMenu.activeSelf)
                 {
-                    Time.timeScale = 1;
-                    
+                    Time.timeScale = 1;                   
                 }
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
@@ -58,7 +57,11 @@ public class EscMenu : MonoBehaviour
 
     public void FlagChanger()
     {
+        if (!deathMenu.activeSelf)
+        {
+            Time.timeScale = 1;
+        }
         escMenuFlag = !escMenuFlag;
-        Time.timeScale = 1;
+        
     }
 }

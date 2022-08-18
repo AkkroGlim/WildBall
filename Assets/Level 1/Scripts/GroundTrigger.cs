@@ -10,13 +10,16 @@ public class GroundTrigger : MonoBehaviour
         if (other.gameObject.tag.Equals("Ground"))
         {
             player.transform.SetParent(other.gameObject.transform);
+            Debug.Log("Пристыковка");
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
+        player.transform.SetParent(null);
         if (other.gameObject.tag.Equals("Ground"))
         {
+            Debug.Log("Отстыковка");
             player.transform.SetParent(null);
         }
     }

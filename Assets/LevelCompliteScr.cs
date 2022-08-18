@@ -71,6 +71,13 @@ public class LevelCompliteScr : MonoBehaviour
         tryCount = 0;
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void NextScene()
+    {
+        deathscr.NullDeathCount();
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.buildIndex + 1);
+    }
 }
 
 

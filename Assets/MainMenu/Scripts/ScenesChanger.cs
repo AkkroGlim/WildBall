@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ScenesChanger : MonoBehaviour
 {
-    
+    private DeathScr deathScr;
     public void SceneChanger(int i)
     {
+        
         SceneManager.LoadScene(i);
         if(Cursor.visible == true && i != 0)
         {
@@ -20,7 +21,9 @@ public class ScenesChanger : MonoBehaviour
             Debug.Log("вкл");
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
+            deathScr = GameObject.FindGameObjectWithTag("DeathTrigger").GetComponent<DeathScr>();
+            deathScr.NullDeathCount();
         }
-        
+
     }
 }
