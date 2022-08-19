@@ -15,6 +15,7 @@ public class LevelCompliteScr : MonoBehaviour
     private int tryCount;
     private int coinCount;
 
+
     public void Update()
     {
         if (deathscr.Restart())
@@ -43,6 +44,7 @@ public class LevelCompliteScr : MonoBehaviour
     public void takeCoin()
     {
         coinCount++;
+        Debug.Log("Монетка");
     }
 
     public void NullCoin()
@@ -51,7 +53,6 @@ public class LevelCompliteScr : MonoBehaviour
     }
     public void restart()
     {
-
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -78,6 +79,8 @@ public class LevelCompliteScr : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex + 1);
     }
+
+    
 }
 
 

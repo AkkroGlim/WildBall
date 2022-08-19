@@ -11,15 +11,15 @@ public class CoinCollision : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            coinAnimator.SetBool("isTouched", true);
-            levelComplite.takeCoin();
+            coinAnimator.SetBool("isTouched", true);            
             StartCoroutine("destroyer");
         }
     }
 
     IEnumerator destroyer()
     {
-        yield return new WaitForSeconds(3);
-        Destroy(this.gameObject);
+        yield return new WaitForSeconds(1); //изменено с 3
+        levelComplite.takeCoin();
+        Destroy(this.gameObject);       
     }
 }

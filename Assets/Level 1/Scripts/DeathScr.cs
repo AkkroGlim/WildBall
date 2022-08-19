@@ -42,7 +42,7 @@ public class DeathScr : MonoBehaviour
         
         Debug.Log(deathCount);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        deathCount++; // срабатывает дважды при падение с платформы. сделать обнуление при выходе через escMenu
+        deathCount++; // срабатывает дважды при падение с платформы.
         Time.timeScale = 1;
         restartMenu.gameObject.SetActive(false);
     }
