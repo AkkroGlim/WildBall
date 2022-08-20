@@ -6,9 +6,6 @@ public class CameraSCr : MonoBehaviour
 {
     private float yRotation;
 
-    
-
-
     void Update()
     {
         RotatePivot();

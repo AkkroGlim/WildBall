@@ -13,6 +13,7 @@ public class DeathScr : MonoBehaviour
     private Transform settingsMenu;
     private static int deathCount = 1;
     private float timeCount;
+    private bool isRestartActive;
     private void Awake()
     {        
         mainMenu = GameObject.Find("GameMenu");
@@ -32,9 +33,14 @@ public class DeathScr : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        Time.timeScale = 0;
-        restartMenu.gameObject.SetActive(true);
-        StartCoroutine("RestartScene");
+        if (!isRestartActive)
+        {
+            isRestartActive = true;
+            Time.timeScale = 0;
+            restartMenu.gameObject.SetActive(true);
+            StartCoroutine("RestartScene");
+        }
+        
     }
     IEnumerator RestartScene()
     {
@@ -42,7 +48,8 @@ public class DeathScr : MonoBehaviour
         
         Debug.Log(deathCount);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        deathCount++; // срабатывает дважды при падение с платформы.
+        
+        deathCount++; 
         Time.timeScale = 1;
         restartMenu.gameObject.SetActive(false);
     }

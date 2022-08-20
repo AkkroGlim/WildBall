@@ -11,9 +11,11 @@ public class LevelCompliteScr : MonoBehaviour
     [SerializeField] private Text timerText;
     [SerializeField] private Text tryCountText;
     [SerializeField] private DeathScr deathscr;
+    [SerializeField] private GameObject finalCoin;
     private float timeCount;
     private int tryCount;
     private int coinCount;
+    private bool finalFlag;
 
 
     public void Update()
@@ -22,11 +24,8 @@ public class LevelCompliteScr : MonoBehaviour
         {
             coinCount = 0;
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Player"))
+        if(finalCoin == null && !finalFlag)
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
@@ -37,6 +36,15 @@ public class LevelCompliteScr : MonoBehaviour
             coinCountText.text = coinCount + " / 4";
             timerText.text = timeCount.ToString();
             tryCountText.text = tryCount.ToString();
+            finalFlag = true;
+        }
+    }
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Player"))
+        {
+            
         }
 
     }

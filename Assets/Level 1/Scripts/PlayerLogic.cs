@@ -8,11 +8,12 @@ public class PlayerLogic : MonoBehaviour
     private float speed = 450f;
     private float jumpForce = 200f;
     
-    [SerializeField] private Rigidbody player;
+    [SerializeField] private Rigidbody playerBody;
     [SerializeField] private Collider playerCol;
     [SerializeField] private Transform frontPoint;
     [SerializeField] private Transform sidePoint;
-    
+    [SerializeField] private GameObject player;
+
 
     private bool isJump;
     
@@ -22,7 +23,7 @@ public class PlayerLogic : MonoBehaviour
     public void Start()
     {
         
-        player.maxAngularVelocity = 4f;
+        playerBody.maxAngularVelocity = 4f;
     }
     public void FixedUpdate()
     {
@@ -48,20 +49,20 @@ public class PlayerLogic : MonoBehaviour
         Vector3 point2 = sidePoint.transform.position - transform.position;
         if (vertical > 0)
         {
-            player.AddForceAtPosition(point * speed, transform.position, ForceMode.Force);
+            playerBody.AddForceAtPosition(point * speed, transform.position, ForceMode.Force);
         }
         else if (vertical < 0)
         {
-            player.AddForceAtPosition(point * -1 * speed, transform.position, ForceMode.Force);
+            playerBody.AddForceAtPosition(point * -1 * speed, transform.position, ForceMode.Force);
         }
 
         if (horizontal > 0)
         {
-            player.AddForceAtPosition(point2 * speed, transform.position, ForceMode.Force);
+            playerBody.AddForceAtPosition(point2 * speed, transform.position, ForceMode.Force);
         }
         else if (horizontal < 0)
         {
-            player.AddForceAtPosition(point2 * -1 * speed, transform.position, ForceMode.Force);
+            playerBody.AddForceAtPosition(point2 * -1 * speed, transform.position, ForceMode.Force);
         }
 
     }
@@ -71,16 +72,26 @@ public class PlayerLogic : MonoBehaviour
         if (isJump && isGrounded)
         {
             isJump = false;           
-            player.AddForce(new Vector3(0f, jumpForce, 0f) * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);           
+            playerBody.AddForce(new Vector3(0f, jumpForce, 0f) * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);           
         }
     }
 
     private void RaycastCheck()
     {
-        isGrounded = Physics.Raycast(gameObject.transform.position, Vector3.down, playerCol.bounds.extents.y + 0.01f);
+        //isGrounded = Physics.Raycast(gameObject.transform.position, Vector3.down, playerCol.bounds.extents.y + 0.01f);
+        RaycastHit hit;
+        isGrounded = Physics.Raycast(gameObject.transform.position, Vector3.down, out hit, playerCol.bounds.extents.y + 0.01f);
+        if (isGrounded)
+        {
+            player.transform.SetParent(hit.transform);
+        }
+        else
+        {
+            player.transform.SetParent(null);
+        }
     }
 
-  
+
 }
 
    
