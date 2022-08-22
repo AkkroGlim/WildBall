@@ -3361,9 +3361,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1687863000}
     m_Modifications:
+    - target: {fileID: 2554415784109594269, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844532311384333071, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646506910189313520, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_Name
       value: coin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: levelComplite
@@ -5968,9 +5984,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 671124519}
     m_Modifications:
+    - target: {fileID: 2554415784109594269, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844532311384333071, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646506910189313520, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_Name
       value: coin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: levelComplite
@@ -7592,9 +7624,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636441674}
     m_Modifications:
+    - target: {fileID: 2554415784109594269, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844532311384333071, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646506910189313520, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_Name
       value: coin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: levelComplite
@@ -9098,9 +9146,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1840981388}
     m_Modifications:
+    - target: {fileID: 2554415784109594269, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844532311384333071, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646506910189313520, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_Name
       value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434794614054106396, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7776832132419061248, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: levelComplite

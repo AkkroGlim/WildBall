@@ -15,8 +15,6 @@ public class CameraSCr : MonoBehaviour
 
     public void LateUpdate()
     {
-        
-
         Vector3 lookDirection = lookRotation *  new Vector3(0, -0.5f ,1);
         Vector3 lookPosition = playerTransform.position - lookDirection * 3.6f;
 
@@ -24,8 +22,7 @@ public class CameraSCr : MonoBehaviour
         {
             lookPosition = playerTransform.position - lookDirection * hit.distance;
         }
-        cameraTransform.SetPositionAndRotation(lookPosition, cameraTransform.rotation);
-        
+        cameraTransform.SetPositionAndRotation(lookPosition, cameraTransform.rotation);       
     }
 
     private void RotatePivot()
