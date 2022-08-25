@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &6127538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+  m_PrefabInstance: {fileID: 8115961576176696764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &20959551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +2776,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1625121616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+  m_PrefabInstance: {fileID: 8983010167066980189}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1629270946
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,6 +3657,10 @@ PrefabInstance:
       propertyPath: dropdown
       value: 
       objectReference: {fileID: 8115961576176696767}
+    - target: {fileID: 2610312700708496966, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: isFullScreenTogle
+      value: 
+      objectReference: {fileID: 6127538}
     - target: {fileID: 4787993741523071550, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
       propertyPath: m_Name
       value: SettingsBackGround
@@ -4624,9 +4650,17 @@ PrefabInstance:
       propertyPath: dropdown
       value: 
       objectReference: {fileID: 522851283}
+    - target: {fileID: 2610312700708496966, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: isFullScreenTogle
+      value: 
+      objectReference: {fileID: 1625121616}
     - target: {fileID: 4787993741523071550, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
       propertyPath: m_Name
       value: SettingsBackGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787993741523071550, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: m_TagString
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8983010166578565010, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4689,12 +4723,48 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: toggleTransition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8983010167066980191}
     - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8983010167066980191}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FullScreenToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FullScreenToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SettingsScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983010167388645849, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8983010167416552590, guid: aee654ca76eb5474798e37658eb937d2, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
