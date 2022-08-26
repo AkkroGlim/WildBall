@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class VolumeScript : MonoBehaviour
 {
     [SerializeField] private AudioMixer am;
+    [SerializeField] private Slider slid;
 
-    public void Start()
+    private void OnEnable()
     {
-        Debug.Log(gameObject.name);
+       
+        
     }
     public void AudioVolume(float sliderValue)
     {
