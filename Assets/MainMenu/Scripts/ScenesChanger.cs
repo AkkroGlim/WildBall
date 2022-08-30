@@ -8,7 +8,7 @@ public class ScenesChanger : MonoBehaviour
     private DeathScr deathScr;
     public void SceneChanger(int i)
     {
-        
+        Time.timeScale = 1;
         SceneManager.LoadScene(i);
         if(Cursor.visible == true && i != 0)
         {

@@ -33,7 +33,7 @@ public class DeathScr : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (!isRestartActive)
+        if (!isRestartActive && other.gameObject.tag.Equals("Player"))
         {
             isRestartActive = true;
             Time.timeScale = 0;

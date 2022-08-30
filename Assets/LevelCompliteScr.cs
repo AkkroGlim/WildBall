@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using One;
 
 public class LevelCompliteScr : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class LevelCompliteScr : MonoBehaviour
     [SerializeField] private Text tryCountText;
     [SerializeField] private DeathScr deathscr;
     [SerializeField] private GameObject finalCoin;
+    [SerializeField] private Button nextButton;
     private float timeCount;
     private int tryCount;
     private int coinCount;
@@ -20,33 +22,38 @@ public class LevelCompliteScr : MonoBehaviour
 
     public void Update()
     {
+        if (LevelStats.GetCoinCount() >= NeedLevelValue.GetLevelPrice())
+        {
+            nextButton.interactable = true;
+        }
+
         if (deathscr.Restart())
         {
             coinCount = 0;
         }
 
-        if(finalCoin == null && !finalFlag)
+        if (finalCoin == null && !finalFlag)
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             Time.timeScale = 0;
             tryCount = deathscr.GetTry();
             timeCount = deathscr.GetTime();
+            LevelStats.increase(coinCount);
             compliteMenu.SetActive(true);
-            coinCountText.text = coinCount + " / 4";
+            if (SceneManager.GetActiveScene().buildIndex != 1)
+            {
+                coinCountText.text = coinCount + " / 4";
+            }
+            else
+            {
+                coinCountText.text = coinCount + " / 1";
+            }
+            
             timerText.text = timeCount.ToString();
             tryCountText.text = tryCount.ToString();
             finalFlag = true;
         }
-    }
-   
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Player"))
-        {
-            
-        }
-
     }
 
     public void takeCoin()
@@ -83,6 +90,7 @@ public class LevelCompliteScr : MonoBehaviour
 
     public void NextScene()
     {
+        Time.timeScale = 1;
         deathscr.NullDeathCount();
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex + 1);
