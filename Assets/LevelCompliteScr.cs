@@ -22,9 +22,13 @@ public class LevelCompliteScr : MonoBehaviour
 
     public void Update()
     {
-        if (LevelStats.GetCoinCount() >= NeedLevelValue.GetLevelPrice())
+        if (LevelStats.GetCoinCount() >= NeedLevelValue.GetLevelPriceForLevels())
         {
             nextButton.interactable = true;
+        }
+        else
+        {
+            nextButton.interactable = false;
         }
 
         if (deathscr.Restart())

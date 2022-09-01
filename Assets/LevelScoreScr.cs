@@ -16,26 +16,31 @@ namespace One
             }
 
         }
-        //SceneManager.GetActiveScene().buildIndex;
+
         public static int GetCoinCount()
         {
-            int i = 0;
+            int coinSum = 0;
             foreach (int j in coinCount)
             {
-                i += j;
+                coinSum += j;
             }
-            return i;
+            return coinSum;
         }
     }
 
     public static class NeedLevelValue
     {
-        private static int[] levelPrice = new int[6] { 0, 3, 8, 12, 15, 21 };
+        private static int[] levelPrice = new int[7] { 0, 1, 3, 6, 11, 16 , 0};
 
-
-        public static int GetLevelPrice()
+        
+        public static int GetLevelPriceForLevels()
         {
-            return levelPrice[SceneManager.GetActiveScene().buildIndex - 1];
+            return levelPrice[SceneManager.GetActiveScene().buildIndex];
+        }
+
+        public static int GetLevelPriceForMaimMenu(int arrayNumb)
+        {
+            return levelPrice[arrayNumb];
         }
     }
 }
