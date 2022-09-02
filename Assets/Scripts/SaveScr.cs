@@ -4,37 +4,53 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
+using One;
 
-public class SaveScr : MonoBehaviour
+namespace Save
 {
-    int[] coinsToSave = new int[6];
-    int masterSliderValueToSave;
-    int musicSliderValueToSave;
-    int soundSliderValueToSave;
-
-    void SaveGame()
+    public class SaveScr
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/Data.dat");
-        SaveData data = new SaveData(coinsToSave, masterSliderValueToSave, musicSliderValueToSave, soundSliderValueToSave);
-        bf.Serialize(file, data);
-        file.Close();
+        int[] coinsToSave = new int[6];
+        int masterSliderValueToSave;
+        int musicSliderValueToSave;
+        int soundSliderValueToSave;
+        private FileStream file;
+        private BinaryFormatter bf;
+        private static bool isSavesLoaded = false;
+        public void Load()
+        {
+            if (!File.Exists(Application.persistentDataPath + "/Data.dat") && !isSavesLoaded)
+            {
+                file = File.Create(Application.persistentDataPath + "/Data.dat");
+                isSavesLoaded = true;
+            }
+            else if (File.Exists(Application.persistentDataPath + "/Data.dat") && !isSavesLoaded)
+            {
+                isSavesLoaded = true;
+                file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
+                SaveData data = (SaveData)bf.Deserialize(file);
+                ArrayList savesArray = data.GetSaves();
+                coinsToSave = (int[])savesArray[0];
+                masterSliderValueToSave = (int)savesArray[1];
+                musicSliderValueToSave = (int)savesArray[2];
+                soundSliderValueToSave = (int)savesArray[3];
+            }
+        }
+        void SaveGame()
+        {
+            SaveData data = new SaveData(coinsToSave, masterSliderValueToSave, musicSliderValueToSave, soundSliderValueToSave);
+            bf.Serialize(file, data);
+            file.Close();
+
+        }
+
+
     }
 
-    void LoadGame()
-    {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
-        SaveData data = (SaveData)bf.Deserialize(file);
-        file.Close();
-        ArrayList saves = data.GetSaves();
-        coinsToSave = (int[])saves[0];
-        masterSliderValueToSave = (int)saves[1];
-        musicSliderValueToSave = (int)saves[2];
-        soundSliderValueToSave = (int)saves[3];
-        //file.Flush(); очистить файл
-    }
 }
+
+
+
 
 [Serializable]
 class SaveData

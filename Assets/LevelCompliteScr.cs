@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using One;
+using Save;
 
 public class LevelCompliteScr : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class LevelCompliteScr : MonoBehaviour
         if (LevelStats.GetCoinCount() >= NeedLevelValue.GetLevelPriceForLevels())
         {
             nextButton.interactable = true;
+            
         }
         else
         {

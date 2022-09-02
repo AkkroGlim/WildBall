@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+
 namespace One
 {
     public static class LevelStats
@@ -15,8 +17,9 @@ namespace One
                 coinCount[SceneManager.GetActiveScene().buildIndex - 1] = coinValue;
             }
 
+            
         }
-
+        
         public static int GetCoinCount()
         {
             int coinSum = 0;
@@ -26,7 +29,10 @@ namespace One
             }
             return coinSum;
         }
+
+        
     }
+
 
     public static class NeedLevelValue
     {
