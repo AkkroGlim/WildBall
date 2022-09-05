@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using One;
-using Save;
+
 
 public class LevelCompliteScr : MonoBehaviour
 {
@@ -96,6 +96,8 @@ public class LevelCompliteScr : MonoBehaviour
 
     public void NextScene()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Time.timeScale = 1;
         deathscr.NullDeathCount();
         Scene scene = SceneManager.GetActiveScene();

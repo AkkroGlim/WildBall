@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Save;
 
 namespace One
 {
@@ -17,9 +17,9 @@ namespace One
                 coinCount[SceneManager.GetActiveScene().buildIndex - 1] = coinValue;
             }
 
-            
+            SaveScr.CoinsValueToSave(coinCount);
         }
-        
+
         public static int GetCoinCount()
         {
             int coinSum = 0;
@@ -30,15 +30,18 @@ namespace One
             return coinSum;
         }
 
-        
+        public static void LoadCoinsValue(int[] coinsValue)
+        {
+            coinCount = coinsValue;
+        }
     }
 
 
     public static class NeedLevelValue
     {
-        private static int[] levelPrice = new int[7] { 0, 1, 3, 6, 11, 16 , 0};
+        private static int[] levelPrice = new int[7] { 0, 1, 3, 6, 11, 16, 0 };
 
-        
+
         public static int GetLevelPriceForLevels()
         {
             return levelPrice[SceneManager.GetActiveScene().buildIndex];
@@ -49,4 +52,6 @@ namespace One
             return levelPrice[arrayNumb];
         }
     }
+
+    
 }

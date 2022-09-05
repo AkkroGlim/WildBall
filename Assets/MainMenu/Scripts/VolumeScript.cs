@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using Save;
 
 public class VolumeScript : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class VolumeScript : MonoBehaviour
     {
         for( int i = 0; i < slidersName.Length; i++)
         {
+            slidersValue = SaveScr.VolumeValueForLoad();
             if (gameObject.name.Equals(slidersName[i]))
             {
                 slid.value = slidersValue[i];
@@ -29,9 +31,10 @@ public class VolumeScript : MonoBehaviour
         {
             if (gameObject.name.Equals(slidersName[i]))
             {
-                slidersValue[i] = slid.value;
+                slidersValue[i] = slid.value;               
             }
         }
+        SaveScr.VolumeValueToSave(slidersValue[0], slidersValue[1], slidersValue[2]);
     }
     public void AudioVolume(float sliderValue)
     {

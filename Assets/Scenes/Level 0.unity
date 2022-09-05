@@ -3083,6 +3083,18 @@ PrefabInstance:
       propertyPath: emitterVelocityMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061253, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061253, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776832132419061253, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7776832132419061255, guid: 08e67a127c83b4441990cb2457b506ce, type: 3}
       propertyPath: m_Size.x
       value: 0.17665607

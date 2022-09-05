@@ -8,43 +8,63 @@ using One;
 
 namespace Save
 {
-    public class SaveScr
+    public static class SaveScr
     {
-        int[] coinsToSave = new int[6];
-        int masterSliderValueToSave;
-        int musicSliderValueToSave;
-        int soundSliderValueToSave;
-        private FileStream file;
-        private BinaryFormatter bf;
-        private static bool isSavesLoaded = false;
-        public void Load()
-        {
-            if (!File.Exists(Application.persistentDataPath + "/Data.dat") && !isSavesLoaded)
-            {
-                file = File.Create(Application.persistentDataPath + "/Data.dat");
-                isSavesLoaded = true;
-            }
-            else if (File.Exists(Application.persistentDataPath + "/Data.dat") && !isSavesLoaded)
-            {
-                isSavesLoaded = true;
-                file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
-                SaveData data = (SaveData)bf.Deserialize(file);
-                ArrayList savesArray = data.GetSaves();
-                coinsToSave = (int[])savesArray[0];
-                masterSliderValueToSave = (int)savesArray[1];
-                musicSliderValueToSave = (int)savesArray[2];
-                soundSliderValueToSave = (int)savesArray[3];
-            }
-        }
-        void SaveGame()
+        private static int[] coinsToSave = new int[6];
+        private static float masterSliderValueToSave;
+        private static float musicSliderValueToSave;
+        private static float soundSliderValueToSave;
+        private static FileStream file;
+        private static BinaryFormatter bf;
+        
+        
+        public static void SaveGame()
         {
             SaveData data = new SaveData(coinsToSave, masterSliderValueToSave, musicSliderValueToSave, soundSliderValueToSave);
+
+            file.Flush();
+            ArrayList saveArray = new ArrayList() { coinsToSave, masterSliderValueToSave, musicSliderValueToSave, soundSliderValueToSave };
+            data.SetSaves(saveArray);
             bf.Serialize(file, data);
-            file.Close();
+
 
         }
 
+        public static void VolumeValueToSave(float masterVolume, float musicVolume, float soundVolume)
+        {
+            masterSliderValueToSave = masterVolume;
+            musicSliderValueToSave = musicVolume;
+            soundSliderValueToSave = soundVolume;
+            SaveGame();
+        }
 
+        public static void CoinsValueToSave(int[] coins)
+        {
+            coinsToSave = coins;
+            SaveGame();
+        }
+
+        public static float[] VolumeValueForLoad()
+        {
+            return new float[] { masterSliderValueToSave, musicSliderValueToSave, soundSliderValueToSave };
+        }
+
+        public static void CreateSave()
+        {
+            file = File.Create(Application.persistentDataPath + "/Data.dat");
+        }
+
+        public static void LoadSave()
+        {
+            file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
+            SaveData data = (SaveData)bf.Deserialize(file);
+            ArrayList loadedArray = data.GetSaves();
+            coinsToSave = (int[])loadedArray[0];
+            masterSliderValueToSave = (int)loadedArray[1];
+            musicSliderValueToSave = (int)loadedArray[2];
+            soundSliderValueToSave = (int)loadedArray[3];
+            LevelStats.LoadCoinsValue(coinsToSave);
+        }
     }
 
 }
@@ -56,11 +76,11 @@ namespace Save
 class SaveData
 {
     private int[] savedCoins = new int[6];
-    private int savedMasterSliderValue;
-    private int savedMusicSliderValue;
-    private int savedSoundSliderValue;
+    private float savedMasterSliderValue;
+    private float savedMusicSliderValue;
+    private float savedSoundSliderValue;
 
-    public SaveData(int[] savedCoins, int savedMasterSliderValue, int savedMusicSliderValue, int savedSoundSliderValue)
+    public SaveData(int[] savedCoins, float savedMasterSliderValue, float savedMusicSliderValue, float savedSoundSliderValue)
     {
         this.savedCoins = savedCoins;
         this.savedMasterSliderValue = savedMasterSliderValue;
@@ -76,5 +96,13 @@ class SaveData
         saves.Add(savedMusicSliderValue);
         saves.Add(savedSoundSliderValue);
         return saves;
+    }
+
+    public void SetSaves(ArrayList saves)
+    {
+        savedCoins = (int[])saves[0];
+        savedMasterSliderValue = (float)saves[1];
+        savedMusicSliderValue = (float)saves[2];
+        savedSoundSliderValue = (float)saves[3];
     }
 }
