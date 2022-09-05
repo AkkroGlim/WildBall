@@ -4338,7 +4338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8884330426033027860, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
       propertyPath: m_Transition
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8884330426033027860, guid: 2e141a0098189d34ebeedf68aa571f87, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
