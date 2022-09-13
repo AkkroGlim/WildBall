@@ -19,7 +19,14 @@ public class PlayerLogic : MonoBehaviour
     
     private bool isGrounded;
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (true)
+        {
+            //collision.collider.ClosestPoint(transform.position)
+        }
+        
+    }
     public void Start()
     {
         

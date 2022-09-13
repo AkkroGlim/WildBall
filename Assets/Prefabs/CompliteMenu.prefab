@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 7808610914504600744}
   m_Layer: 5
   m_Name: CompliteMenu
-  m_TagString: Untagged
+  m_TagString: CompliteMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
