@@ -34,6 +34,11 @@ namespace One
         {
             coinCount = coinsValue;
         }
+
+        public static int GetCoinsFromLevel(int levelNumb)
+        {
+            return coinCount[levelNumb];
+        }
     }
 
 

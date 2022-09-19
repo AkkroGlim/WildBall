@@ -382,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &70550623
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &918836764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5917,14 +5917,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musics:
-  - trackTitle: []
-    track: {fileID: 0}
-  - trackTitle: []
-    track: {fileID: 0}
-  - trackTitle: []
-    track: {fileID: 0}
-  - trackTitle: []
-    track: {fileID: 0}
+  - trackTitle:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    track:
+    - {fileID: 8300000, guid: 69618075f41204c44ba71d45836582e8, type: 3}
+    - {fileID: 8300000, guid: bedfc64eb93e39c4bbf707ada89c0711, type: 3}
+    - {fileID: 8300000, guid: 9b132afb506304f4f9f4bd608a38fa3a, type: 3}
+    - {fileID: 8300000, guid: 9d4503e4f96612946a46ff5d116c88d5, type: 3}
+  - trackTitle:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    track:
+    - {fileID: 8300000, guid: 5a47def1aaba4d744b918b5ab0afa6b2, type: 3}
+    - {fileID: 8300000, guid: df3d65b8ba0320a4fb8e1e06057cadc3, type: 3}
+    - {fileID: 8300000, guid: 41f89ddb0db20c245a3d40602f9103ed, type: 3}
+    - {fileID: 8300000, guid: 02f7a8f9120070a43b7ca8bc35f87e12, type: 3}
+  - trackTitle:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    track:
+    - {fileID: 8300000, guid: a5850a8cd368d214ab35be85f0d95fb8, type: 3}
+    - {fileID: 8300000, guid: e224b070e51506948a6f0c629100f6f8, type: 3}
+    - {fileID: 8300000, guid: 3a09ec1bce6a9c947b5710b471ce51de, type: 3}
+    - {fileID: 8300000, guid: 63f64a4e3d827ea418ba718a883ed97e, type: 3}
+  - trackTitle:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    track:
+    - {fileID: 8300000, guid: edaa1f7ffc4013643bdb3f9f93662c42, type: 3}
+    - {fileID: 8300000, guid: b762cb41b9409c2438f9b917ee7851ad, type: 3}
+    - {fileID: 8300000, guid: 3e5b6eb174c199149b84726cfafaa228, type: 3}
+    - {fileID: 8300000, guid: 1d8ebb1bb5f827146a65e7b34880103a, type: 3}
+  musicMenu: {fileID: 70550622}
 --- !u!1001 &8983010167066980189
 PrefabInstance:
   m_ObjectHideFlags: 0
