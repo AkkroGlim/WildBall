@@ -11,6 +11,7 @@ public class EscMenu : MonoBehaviour
     private bool escMenuFlag;
     private GameObject menu;
     private GameObject compliteMenu;
+    private GameObject musicMenu;
     [SerializeField] GameObject escMenu;
     [SerializeField] GameObject deathMenu;
 
@@ -21,8 +22,8 @@ public class EscMenu : MonoBehaviour
     void Update()
     {
         compliteMenu = GameObject.FindGameObjectWithTag("CompliteMenu");
-        
-        if (!SceneManager.GetActiveScene().name.Equals("MainMenu") && Input.GetKeyDown(KeyCode.Escape) && compliteMenu == null)
+        musicMenu = GameObject.FindGameObjectWithTag("MusicMenu");
+        if (!SceneManager.GetActiveScene().name.Equals("MainMenu") && Input.GetKeyDown(KeyCode.Escape) && compliteMenu == null && musicMenu == null)
         {
             menu = GameObject.FindGameObjectWithTag("Menu");
             escMenuFlag = !escMenuFlag;

@@ -11,6 +11,7 @@ TagManager:
   - PlayerStats
   - CompliteMenu
   - DeathTrigger
+  - MusicMenu
   layers:
   - Default
   - TransparentFX
