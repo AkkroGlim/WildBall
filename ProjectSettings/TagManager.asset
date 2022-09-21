@@ -12,6 +12,7 @@ TagManager:
   - CompliteMenu
   - DeathTrigger
   - MusicMenu
+  - Audio
   layers:
   - Default
   - TransparentFX

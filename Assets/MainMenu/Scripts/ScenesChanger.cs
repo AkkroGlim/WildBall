@@ -24,6 +24,7 @@ public class ScenesChanger : MonoBehaviour
             deathScr = GameObject.FindGameObjectWithTag("DeathTrigger").GetComponent<DeathScr>();
             deathScr.NullDeathCount();
         }
-
+        
+        
     }
 }

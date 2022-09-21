@@ -1722,6 +1722,7 @@ GameObject:
   - component: {fileID: 1275247348}
   - component: {fileID: 1275247347}
   - component: {fileID: 1275247346}
+  - component: {fileID: 1275247349}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1778,6 +1779,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1275247349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275247345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d15e76d334f3a43bce9b9ec7e9169c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 8fec6bbb6397bc34fac9acb8dea4d502, type: 3}
+  - {fileID: 8300000, guid: 922d352ba6fcea0418184f96c89fc34a, type: 3}
+  - {fileID: 8300000, guid: 29916496d823e68469e6ab919c4c2936, type: 3}
+  - {fileID: 8300000, guid: 7760dfd196b9e0c449ae7daad3ac4f0d, type: 3}
+  - {fileID: 8300000, guid: fcc3f2f266a3ee5418d3a8b5ccfe4971, type: 3}
+  - {fileID: 8300000, guid: 45dbdd519b354204bb6a9a91cf2a91e2, type: 3}
 --- !u!1 &1300517696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 50754954277266222, guid: 03c392019ced5194ab747990968e215f, type: 3}

@@ -10,7 +10,10 @@ public class MusicScr : MonoBehaviour
     [SerializeField] private List<Track> musics = new List<Track>(4);
     [SerializeField] private GameObject musicMenu;
     [SerializeField] private AudioSource music;
-    [SerializeField] private List<AudioClip> clips;
+    [SerializeField] private List<AudioClip> levelMuscis;
+    [SerializeField] private GameObject musicController;
+    private int musicGenre;
+    private int trackNumb;
     private GameObject compliteMenu;
     private List<Transform> menus = new List<Transform>(3);
 
@@ -29,7 +32,10 @@ public class MusicScr : MonoBehaviour
 
     public void SetPlusMusic(int genre)
     {
-        music.clip = musics[genre].track[Random.Range(0, 4)];
+        musicController.SetActive(true);
+        musicGenre = genre;
+        trackNumb = Random.Range(0, 4);
+        music.clip = musics[musicGenre].track[trackNumb];
         music.Play();
 
     }
@@ -74,11 +80,40 @@ public class MusicScr : MonoBehaviour
         foreach (Transform menu in menus)
         {
             ActiveMenu = menu.gameObject.activeSelf;
-            if(ActiveMenu == true)
+            if (ActiveMenu == true)
             {
                 break;
             }
         }
         return ActiveMenu;
+    }
+
+    public void NextButton()
+    {
+        trackNumb++;
+        if (trackNumb >= musics[musicGenre].track.Length)
+        {
+            trackNumb = 0;
+        }
+        music.clip = musics[musicGenre].track[trackNumb];
+        music.Play();
+    }
+
+    public void PreviousButton()
+    {
+        trackNumb--;
+        if (trackNumb < 0)
+        {
+            trackNumb = musics[musicGenre].track.Length - 1;
+        }
+        music.clip = musics[musicGenre].track[trackNumb];
+        music.Play();
+    }
+
+    public void ResetButton()
+    {
+        music.clip = levelMuscis[SceneManager.GetActiveScene().buildIndex - 1];
+        music.Play();
+        musicController.SetActive(false);
     }
 }
