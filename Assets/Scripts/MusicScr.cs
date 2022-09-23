@@ -28,6 +28,7 @@ public class MusicScr : MonoBehaviour
     {
         ActiveMusicSource();
         ActiveMusicMenu();
+        ChangeToNextTrack();
     }
 
     public void SetPlusMusic(int genre)
@@ -35,6 +36,7 @@ public class MusicScr : MonoBehaviour
         musicController.SetActive(true);
         musicGenre = genre;
         trackNumb = Random.Range(0, 4);
+        music.loop = false;
         music.clip = musics[musicGenre].track[trackNumb];
         music.Play();
 
@@ -71,6 +73,15 @@ public class MusicScr : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
+
+        }
+    }
+
+    private void ChangeToNextTrack()
+    {
+        if (!music.isPlaying  && music.gameObject.activeSelf)
+        {
+            NextButton();
         }
     }
 
@@ -113,6 +124,7 @@ public class MusicScr : MonoBehaviour
     public void ResetButton()
     {
         music.clip = levelMuscis[SceneManager.GetActiveScene().buildIndex - 1];
+        music.loop = true;
         music.Play();
         musicController.SetActive(false);
     }

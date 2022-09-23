@@ -23,6 +23,7 @@ public class LevelMusics : MonoBehaviour
             if (music.clip.name == clip.name)
             {
                 music.clip = clips[SceneManager.GetActiveScene().buildIndex - 1];
+                music.loop = true;
                 break;
             }
         }
