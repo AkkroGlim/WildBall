@@ -8,7 +8,7 @@ using System;
 
 [Serializable]public class Track
     {
-        public Image[] trackTitle;
+        public Sprite[] trackTitle;
         public AudioClip[] track;
         private bool[] avaliable = new bool[4];
     }

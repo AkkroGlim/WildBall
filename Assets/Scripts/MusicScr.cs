@@ -40,7 +40,7 @@ public class MusicScr : MonoBehaviour
         musicGenre = genre;
         trackNumb = Random.Range(0, 4);
         music.loop = false;
-        albumTitle = musics[musicGenre].trackTitle[trackNumb];
+        albumTitle.sprite = musics[musicGenre].trackTitle[trackNumb];
         music.clip = musics[musicGenre].track[trackNumb];
         trackName.text = music.clip.name;
 
@@ -121,7 +121,7 @@ public class MusicScr : MonoBehaviour
             trackNumb = 0;
         }
         music.clip = musics[musicGenre].track[trackNumb];
-        albumTitle = musics[musicGenre].trackTitle[trackNumb];
+        albumTitle.sprite = musics[musicGenre].trackTitle[trackNumb];
         trackName.text = music.clip.name;
         music.Play();
     }
@@ -134,7 +134,7 @@ public class MusicScr : MonoBehaviour
             trackNumb = musics[musicGenre].track.Length - 1;
         }
         music.clip = musics[musicGenre].track[trackNumb];
-        albumTitle = musics[musicGenre].trackTitle[trackNumb];
+        albumTitle.sprite = musics[musicGenre].trackTitle[trackNumb];
         trackName.text = music.clip.name;
         music.Play();
     }

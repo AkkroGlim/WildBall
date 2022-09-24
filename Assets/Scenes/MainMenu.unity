@@ -557,7 +557,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -170}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337109430
 MonoBehaviour:
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57bb7399aba7b2344a4065c526193896, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a3a8c646744d6c47afb7e8c35da0240, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &337109431
 CanvasRenderer:
@@ -916,8 +916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72, y: -98}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: -90, y: -100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369053599
 MonoBehaviour:
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7f7f9225b7648bf40add938d6ef8a65a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2625,8 +2625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: -98}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 90, y: -100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078122604
 MonoBehaviour:
@@ -2648,7 +2648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 39a839d608e962643b3602c167d6d7c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4591,7 +4591,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -12}
-  m_SizeDelta: {x: 480, y: 90}
+  m_SizeDelta: {x: 460, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829707431
 MonoBehaviour:
@@ -6498,40 +6498,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musics:
   - trackTitle:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 21300000, guid: f4064255d57488245a61ce627ab3a7b9, type: 3}
+    - {fileID: 21300000, guid: e005f75006b2a9d4f9194600537c74ee, type: 3}
+    - {fileID: 21300000, guid: 546754266244b9e4ab08ed7c8f9afa2f, type: 3}
+    - {fileID: 21300000, guid: 5076ce9bdfa217041826c939cd16f952, type: 3}
     track:
     - {fileID: 8300000, guid: 69618075f41204c44ba71d45836582e8, type: 3}
     - {fileID: 8300000, guid: bedfc64eb93e39c4bbf707ada89c0711, type: 3}
     - {fileID: 8300000, guid: 9b132afb506304f4f9f4bd608a38fa3a, type: 3}
     - {fileID: 8300000, guid: 9d4503e4f96612946a46ff5d116c88d5, type: 3}
   - trackTitle:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 21300000, guid: 25b3e469d7aa08142b94aee138317924, type: 3}
+    - {fileID: 21300000, guid: 1704c0e8a561cfa4eb5ae26d55049e22, type: 3}
+    - {fileID: 21300000, guid: 220ccaa455997124f81171bd26416caa, type: 3}
+    - {fileID: 21300000, guid: b55e1bed019fdb5459e18d23fd7da086, type: 3}
     track:
     - {fileID: 8300000, guid: 5a47def1aaba4d744b918b5ab0afa6b2, type: 3}
     - {fileID: 8300000, guid: df3d65b8ba0320a4fb8e1e06057cadc3, type: 3}
     - {fileID: 8300000, guid: 82cf6150594b13f468de4e9824f97c99, type: 3}
     - {fileID: 8300000, guid: 02f7a8f9120070a43b7ca8bc35f87e12, type: 3}
   - trackTitle:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 21300000, guid: 607a23f5b2cbb9948b5a4c111c2d515a, type: 3}
+    - {fileID: 21300000, guid: 4436f977ca0b5f6468145c6f0fc705c9, type: 3}
+    - {fileID: 21300000, guid: 49e8d3633bb02b649bdd5af7a128a410, type: 3}
+    - {fileID: 21300000, guid: ed543e4feb0ae3b47825ce36cf7da70d, type: 3}
     track:
     - {fileID: 8300000, guid: a5850a8cd368d214ab35be85f0d95fb8, type: 3}
     - {fileID: 8300000, guid: e224b070e51506948a6f0c629100f6f8, type: 3}
     - {fileID: 8300000, guid: 3a09ec1bce6a9c947b5710b471ce51de, type: 3}
     - {fileID: 8300000, guid: 63f64a4e3d827ea418ba718a883ed97e, type: 3}
   - trackTitle:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 21300000, guid: dc74b988d1777b549ac427ddf73c6696, type: 3}
+    - {fileID: 21300000, guid: ddb9edf1f9acf6b42957c08471e8efe0, type: 3}
+    - {fileID: 21300000, guid: 439693c5172fc914583d202a72d8e525, type: 3}
+    - {fileID: 21300000, guid: 63ff08edb7d6f794b9c0d340689db9e7, type: 3}
     track:
     - {fileID: 8300000, guid: edaa1f7ffc4013643bdb3f9f93662c42, type: 3}
     - {fileID: 8300000, guid: b762cb41b9409c2438f9b917ee7851ad, type: 3}
