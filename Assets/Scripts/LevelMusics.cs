@@ -8,11 +8,6 @@ public class LevelMusics : MonoBehaviour
     [SerializeField] private List<AudioClip> clips;
     private GameObject audioObject;
     private AudioSource music;
-    void Start()
-    {
-        
-        
-    }
 
     private void Awake()
     {
@@ -20,10 +15,11 @@ public class LevelMusics : MonoBehaviour
         music = audioObject.transform.GetChild(1).GetComponent<AudioSource>();
         foreach (AudioClip clip in clips)
         {
-            if (music.clip.name == clip.name)
+            if (music.clip.name.Equals(clip.name))
             {
                 music.clip = clips[SceneManager.GetActiveScene().buildIndex - 1];
                 music.loop = true;
+                music.Play();
                 break;
             }
         }

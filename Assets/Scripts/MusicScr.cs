@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using One;
+using UnityEngine.UI;
 
 
 public class MusicScr : MonoBehaviour
@@ -12,6 +13,8 @@ public class MusicScr : MonoBehaviour
     [SerializeField] private AudioSource music;
     [SerializeField] private List<AudioClip> levelMuscis;
     [SerializeField] private GameObject musicController;
+    [SerializeField] private Text trackName;
+    [SerializeField] private Image albumTitle;
     private int musicGenre;
     private int trackNumb;
     private GameObject compliteMenu;
@@ -37,7 +40,10 @@ public class MusicScr : MonoBehaviour
         musicGenre = genre;
         trackNumb = Random.Range(0, 4);
         music.loop = false;
+        albumTitle = musics[musicGenre].trackTitle[trackNumb];
         music.clip = musics[musicGenre].track[trackNumb];
+        trackName.text = music.clip.name;
+
         music.Play();
 
     }
@@ -79,7 +85,15 @@ public class MusicScr : MonoBehaviour
 
     private void ChangeToNextTrack()
     {
-        if (!music.isPlaying  && music.gameObject.activeSelf)
+        bool levelMusic = false;
+        foreach(AudioClip track in levelMuscis)
+        {
+            if (music.clip.name.Equals(track.name))
+            {
+                levelMusic = true;
+            }
+        }
+        if (!music.isPlaying && music.gameObject.activeSelf && levelMusic)
         {
             NextButton();
         }
@@ -107,6 +121,8 @@ public class MusicScr : MonoBehaviour
             trackNumb = 0;
         }
         music.clip = musics[musicGenre].track[trackNumb];
+        albumTitle = musics[musicGenre].trackTitle[trackNumb];
+        trackName.text = music.clip.name;
         music.Play();
     }
 
@@ -118,6 +134,8 @@ public class MusicScr : MonoBehaviour
             trackNumb = musics[musicGenre].track.Length - 1;
         }
         music.clip = musics[musicGenre].track[trackNumb];
+        albumTitle = musics[musicGenre].trackTitle[trackNumb];
+        trackName.text = music.clip.name;
         music.Play();
     }
 
