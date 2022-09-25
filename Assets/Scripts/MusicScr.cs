@@ -15,7 +15,7 @@ public class MusicScr : MonoBehaviour
     [SerializeField] private GameObject musicController;
     [SerializeField] private Text trackName;
     [SerializeField] private Image albumTitle;
-    private Button test;
+    
     private int musicGenre;
     private int trackNumb;
     private GameObject compliteMenu;

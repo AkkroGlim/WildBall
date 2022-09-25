@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
 
 
@@ -17,11 +18,12 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private Transform frontPoint;
     [SerializeField] private Transform sidePoint;
     [SerializeField] private GameObject player;
-    private Vector3 groundPoint = Vector3.down;
-    
+    private Vector3 groundPoint = Vector3.down;   
     private bool isJump;
-    
     private bool isGrounded;
+    private float raycastMaxDistance = 0.1f;
+
+
 
     private void OnCollisionStay(Collision collision)
     {
@@ -40,7 +42,12 @@ public class PlayerLogic : MonoBehaviour
     }
     public void Start()
     {
-        
+        if(SceneManager.GetActiveScene().name.Equals("Level 3"))
+        {
+            jumpForce = 300f;
+            playerBody.mass = 50;
+            raycastMaxDistance = 0.5f;
+        }
         playerBody.maxAngularVelocity = 4f;
     }
     public void FixedUpdate()
@@ -98,10 +105,9 @@ public class PlayerLogic : MonoBehaviour
 
     private void RaycastCheck()
     {
-        //isGrounded = Physics.Raycast(gameObject.transform.position, Vector3.down, playerCol.bounds.extents.y + 0.01f);
         RaycastHit hit;
-        isGrounded = Physics.Raycast(gameObject.transform.position, groundPoint, out hit, playerCol.bounds.extents.y + 0.01f);
-        if (isGrounded)
+        isGrounded = Physics.Raycast(gameObject.transform.position, groundPoint, out hit, playerCol.bounds.extents.y + raycastMaxDistance);
+        if (isGrounded && hit.transform.tag.Equals("Ground"))
         {
             player.transform.SetParent(hit.transform);
         }
