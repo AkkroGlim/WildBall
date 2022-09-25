@@ -1,42 +1,12 @@
 fileFormatVersion: 2
-guid: b30c2abf99784cb42aa1cd5e8818a8a6
+guid: e0a966c380400df40a538d3db42a6430
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -623603649343465320
-    second: DefCabDoors
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blue steel (noTEX).001
-    second: {fileID: 2100000, guid: b220f26ef08c02549b5617dc99647dc3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Blue steel.001
-    second: {fileID: 2100000, guid: b220f26ef08c02549b5617dc99647dc3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Corner Rings.001
-    second: {fileID: 2100000, guid: 5b4c858d04706ad45b304dbd813ceda3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass.001
-    second: {fileID: 2100000, guid: 9881f4c3c05991f4c899254a9a93bca4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Orange steel.001
-    second: {fileID: 2100000, guid: 6710cd814bd2d7e489c47c94e9736b64, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red Emis.001
-    second: {fileID: 2100000, guid: 69b57e58300d86a44a31afbfa9357727, type: 2}
+    second: DefCabDoor
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -66,7 +36,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: DefCabDoors
+      name: DefCabDoor
       takeName: Scene
       internalID: 0
       firstFrame: 1
