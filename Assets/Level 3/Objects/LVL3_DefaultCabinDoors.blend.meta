@@ -6,7 +6,37 @@ ModelImporter:
   - first:
       74: -623603649343465320
     second: DefCabDoor
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue steel (noTEX).001
+    second: {fileID: 2100000, guid: b220f26ef08c02549b5617dc99647dc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue steel.001
+    second: {fileID: 2100000, guid: b220f26ef08c02549b5617dc99647dc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corner Rings.001
+    second: {fileID: 2100000, guid: 5b4c858d04706ad45b304dbd813ceda3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass.001
+    second: {fileID: 2100000, guid: 9881f4c3c05991f4c899254a9a93bca4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange steel.001
+    second: {fileID: 2100000, guid: 6710cd814bd2d7e489c47c94e9736b64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Emis.001
+    second: {fileID: 2100000, guid: 69b57e58300d86a44a31afbfa9357727, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
