@@ -3,7 +3,72 @@ guid: 24ee183dab662e5448dedd93a5982f9c
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black wood Mat
+    second: {fileID: 2100000, guid: 34a2002d3960a1d4e855123656d17df4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green Emis
+    second: {fileID: 2100000, guid: 30ccc25ca2f318540819f8823ce031ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 08ba949c5217f77489cb86d530c08f35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Emis
+    second: {fileID: 2100000, guid: ed5fe01d96c6ab641b234361af75fb54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RockMat (Cylinder
+    second: {fileID: 2100000, guid: 85045d16d7aab1247be60484c9dbcd07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RopeMat
+    second: {fileID: 2100000, guid: 4dc7110a903b30d429f61ca1b0915ed9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 08
+    second: {fileID: 2100000, guid: 7d3edfbfa2e3afb49bc628da8ca5f6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 09.001
+    second: {fileID: 2100000, guid: 7b0677d1937cd4e46812ac9f2deb5ef2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 10
+    second: {fileID: 2100000, guid: f1cdc4e8241dc6c459b3487de53ccfca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 11.001
+    second: {fileID: 2100000, guid: 90b360fcaa39f0640852fc39c64554d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 12
+    second: {fileID: 2100000, guid: 18cc3406f4ef51642924368571c9e1e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 13
+    second: {fileID: 2100000, guid: f1fd9ab27091cf54087924ee7aaed262, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss rock 14
+    second: {fileID: 2100000, guid: 4d6a9e98b283c814fb46ce6b52f8b5a6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
