@@ -8,7 +8,7 @@ namespace One
 {
     public static class LevelStats
     {
-        private static int[] coinCount = new int[6];
+        private static int[] coinCount = new int[5];
 
         public static void increase(int coinValue)
         {
@@ -44,7 +44,7 @@ namespace One
 
     public static class NeedLevelValue
     {
-        private static int[] levelPrice = new int[7] { 0, 1, 3, 6, 11, 16, 0 };
+        private static int[] levelPrice = new int[5] { 0, 1, 3, 7, 12};
 
 
         public static int GetLevelPriceForLevels()

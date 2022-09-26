@@ -17,10 +17,13 @@ public class LevelMusics : MonoBehaviour
         {
             if (music.clip.name.Equals(clip.name))
             {
-                music.clip = clips[SceneManager.GetActiveScene().buildIndex - 1];
-                music.loop = true;
-                music.Play();
-                break;
+                if(!music.clip.Equals(clips[SceneManager.GetActiveScene().buildIndex - 1]))
+                {
+                    music.clip = clips[SceneManager.GetActiveScene().buildIndex - 1];
+                    music.loop = true;
+                    music.Play();
+                    break;
+                }             
             }
         }
     }

@@ -10,7 +10,8 @@ namespace Save
 {
     public static class SaveScr
     {
-        private static int[] coinsToSave = new int[6];
+        
+        private static int[] coinsToSave = new int[5];
         private static float masterSliderValueToSave;
         private static float musicSliderValueToSave;
         private static float soundSliderValueToSave;
@@ -78,7 +79,7 @@ namespace Save
 [Serializable]
 class SaveData
 {
-    private int[] savedCoins = new int[6];
+    private int[] savedCoins = new int[5];
     private float savedMasterSliderValue;
     private float savedMusicSliderValue;
     private float savedSoundSliderValue;
