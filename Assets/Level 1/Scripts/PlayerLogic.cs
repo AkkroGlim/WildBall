@@ -12,13 +12,13 @@ public class PlayerLogic : MonoBehaviour
 {
     private float speed = 450f;
     private float jumpForce = 200f;
-    
+
     [SerializeField] private Rigidbody playerBody;
     [SerializeField] private Collider playerCol;
     [SerializeField] private Transform frontPoint;
     [SerializeField] private Transform sidePoint;
     [SerializeField] private GameObject player;
-    private Vector3 groundPoint = Vector3.down;   
+    private Vector3 groundPoint = Vector3.down;
     private bool isJump;
     private bool isGrounded;
     private float raycastMaxDistance = 0.1f;
@@ -28,9 +28,8 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         if (playerCol.ClosestPoint(collision.contacts[collision.contacts.Length - 1].point).y < transform.position.y - playerCol.bounds.extents.y / 2)
-        {                        
-            groundPoint = playerCol.ClosestPoint(collision.contacts[collision.contacts.Length - 1].point) - transform.position;           
-            Debug.Log(groundPoint);
+        {
+            groundPoint = playerCol.ClosestPoint(collision.contacts[collision.contacts.Length - 1].point) - transform.position;
         }
         else
         {
@@ -42,19 +41,15 @@ public class PlayerLogic : MonoBehaviour
     }
     public void Start()
     {
-        if(SceneManager.GetActiveScene().name.Equals("Level 3"))
-        {
-            jumpForce = 300f;
-            playerBody.mass = 50;
-            raycastMaxDistance = 0.5f;
-        }
+        LevelsFeatures();
+        
         playerBody.maxAngularVelocity = 4f;
     }
     public void FixedUpdate()
     {
         RaycastCheck();
         Move();
-        jump();       
+        jump();
     }
 
     public void Update()
@@ -94,12 +89,12 @@ public class PlayerLogic : MonoBehaviour
 
     private void jump()
     {
-        
+
         if (isJump && isGrounded)
         {
             isJump = false;
             playerBody.AddForce(new Vector3(0f, jumpForce, 0f) * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);
-            
+
         }
     }
 
@@ -117,10 +112,25 @@ public class PlayerLogic : MonoBehaviour
         }
     }
 
+    private void LevelsFeatures()
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level 3":
+                jumpForce = 300f;
+                playerBody.mass = 50;
+                raycastMaxDistance = 0.5f;
+                break;
+            case "Level 4":
+                jumpForce = 230f;
+                raycastMaxDistance = 0.2f;
+                break;
+        }
+    }
 
 }
 
-   
+
 
 
 

@@ -1,23 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using illusion;
 
 public class MirageLogic : MonoBehaviour
 {
     [SerializeField] private GameObject tombsParent;
-    [SerializeField] List<GameObject> listOfTombs;
-    private int tombNumber;
+    private MeshRenderer tombRend;
+    private MeshCollider tombColl;
     private bool isIllusion;
     private void Start()
     {
-        for(int i = 0; i < listOfTombs.Count; i++)
+        int cycleÑount = 0;
+        foreach (Transform child in tombsParent.transform)
         {
-            if (gameObject.name.Equals(listOfTombs[i].name))
+            if (gameObject.name.Equals(child.name))
             {
-                tombNumber = i;
+                isIllusion = MirageRandomScr.GetRandomList(cycleÑount);
                 break;
             }
+            cycleÑount++;
+        }
+
+        tombRend = transform.GetComponent<MeshRenderer>();
+        tombColl = transform.GetComponent<MeshCollider>();
+    }
+
+    public void Illusion()
+    {
+        if (!isIllusion)
+        {
+            tombColl.enabled = false;
+        }
+        else
+        {
+            Color col = tombRend.material.color;
+            col.a = 255;
+            tombRend.material.SetColor("_Color", col);           
         }
     }
-    
+
 }

@@ -13,11 +13,12 @@ TagManager:
   - DeathTrigger
   - MusicMenu
   - Audio
+  - Tablet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Illusion
   - Water
   - UI
   - 

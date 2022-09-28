@@ -23,15 +23,22 @@ public class LevelCompliteScr : MonoBehaviour
 
     public void Update()
     {
-        if (LevelStats.GetCoinCount() >= NeedLevelValue.GetLevelPriceForLevels())
+        if(!SceneManager.GetActiveScene().name.Equals("Level 4"))
         {
-            nextButton.interactable = true;
-            
+            if (LevelStats.GetCoinCount() >= NeedLevelValue.GetLevelPriceForLevels())
+            {
+                nextButton.interactable = true;
+            }
+            else
+            {
+                nextButton.interactable = false;
+            }
         }
         else
         {
-            nextButton.interactable = false;
+            nextButton.gameObject.SetActive(false);
         }
+        
 
         if (deathscr.Restart())
         {
@@ -47,7 +54,7 @@ public class LevelCompliteScr : MonoBehaviour
             timeCount = deathscr.GetTime();
             LevelStats.increase(coinCount);
             compliteMenu.SetActive(true);
-            if (SceneManager.GetActiveScene().buildIndex != 1)
+            if (SceneManager.GetActiveScene().buildIndex != 1 && SceneManager.GetActiveScene().buildIndex != 5)
             {
                 coinCountText.text = coinCount + " / 4";
             }

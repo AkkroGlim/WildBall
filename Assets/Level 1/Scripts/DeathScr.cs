@@ -15,21 +15,27 @@ public class DeathScr : MonoBehaviour
     private float timeCount;
     private bool isRestartActive;
     private void Awake()
-    {        
+    {
         mainMenu = GameObject.Find("GameMenu");
         restartMenu = mainMenu.transform.GetChild(2);
         escMenu = mainMenu.transform.GetChild(0);
         settingsMenu = mainMenu.transform.GetChild(1);
     }
 
+    private void Start()
+    {
+        TabletActivate();
+    }
+
     private void Update()
     {
         timeCount += Time.deltaTime;
+        
         if (restartMenu.gameObject.activeSelf && !escMenu.gameObject.activeSelf && !settingsMenu.gameObject.activeSelf)
         {
-            isRPress = Input.GetKeyDown(KeyCode.R);           
+            isRPress = Input.GetKeyDown(KeyCode.R);
         }
-            
+
     }
     private void OnTriggerStay(Collider other)
     {
@@ -40,16 +46,16 @@ public class DeathScr : MonoBehaviour
             restartMenu.gameObject.SetActive(true);
             StartCoroutine("RestartScene");
         }
-        
+
     }
     IEnumerator RestartScene()
     {
         yield return new WaitWhile(() => isRPress != true);
-        
+
         Debug.Log(deathCount);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
-        deathCount++; 
+
+        deathCount++;
         Time.timeScale = 1;
         restartMenu.gameObject.SetActive(false);
     }
@@ -72,5 +78,15 @@ public class DeathScr : MonoBehaviour
     public void NullDeathCount()
     {
         deathCount = 1;
+    }
+
+    private void TabletActivate()
+    {
+        if(deathCount > 10)
+        {
+            GameObject tablet = GameObject.FindGameObjectWithTag("Tablet");
+            tablet.transform.GetChild(0).gameObject.SetActive(true);
+            tablet.transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
 }
