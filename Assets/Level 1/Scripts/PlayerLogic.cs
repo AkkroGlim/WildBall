@@ -18,6 +18,9 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField] private Transform frontPoint;
     [SerializeField] private Transform sidePoint;
     [SerializeField] private GameObject player;
+    [SerializeField] private AudioClip[] playerClips;
+    private bool dropFlag;
+    private AudioSource playerSound;
     private Vector3 groundPoint = Vector3.down;
     private bool isJump;
     private bool isGrounded;
@@ -35,16 +38,19 @@ public class PlayerLogic : MonoBehaviour
         {
             groundPoint = Vector3.down;
         }
-
-
-
     }
+
+    
+
     public void Start()
     {
-        LevelsFeatures();
-        
+        playerSound = gameObject.GetComponent<AudioSource>();
         playerBody.maxAngularVelocity = 4f;
+
+        LevelsFeatures();
+        choosePlayerSound();
     }
+
     public void FixedUpdate()
     {
         RaycastCheck();
@@ -58,7 +64,6 @@ public class PlayerLogic : MonoBehaviour
         {
             isJump = true;
         }
-
     }
 
     private void Move()
@@ -84,17 +89,14 @@ public class PlayerLogic : MonoBehaviour
         {
             playerBody.AddForceAtPosition(point2 * -1 * speed, transform.position, ForceMode.Force);
         }
-
     }
 
     private void jump()
     {
-
         if (isJump && isGrounded)
         {
             isJump = false;
             playerBody.AddForce(new Vector3(0f, jumpForce, 0f) * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);
-
         }
     }
 
@@ -104,11 +106,17 @@ public class PlayerLogic : MonoBehaviour
         isGrounded = Physics.Raycast(gameObject.transform.position, groundPoint, out hit, playerCol.bounds.extents.y + raycastMaxDistance);
         if (isGrounded && hit.transform.tag.Equals("Ground"))
         {
-            player.transform.SetParent(hit.transform);
+            player.transform.SetParent(hit.transform);           
+            if (dropFlag)
+            {
+                playerSound.Play();
+                dropFlag = false;
+            }           
         }
         else
         {
             player.transform.SetParent(null);
+            dropFlag = true;
         }
     }
 
@@ -128,6 +136,27 @@ public class PlayerLogic : MonoBehaviour
         }
     }
 
+    private void choosePlayerSound()
+    {
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            case 1:
+                playerSound.clip = playerClips[0];
+                break;
+            case 2:
+                playerSound.clip = playerClips[1];
+                break;
+            case 3:
+                playerSound.clip = playerClips[2];
+                break;
+            case 4:
+                playerSound.clip = playerClips[3];
+                break;
+            case 5:
+                playerSound.clip = playerClips[0];
+                break;
+        }
+    }
 }
 
 

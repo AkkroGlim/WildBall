@@ -7,11 +7,18 @@ public class CoinCollision : MonoBehaviour
 {
     [SerializeField] private Animator coinAnimator;
     [SerializeField] private LevelCompliteScr levelComplite;
+    private AudioSource coinAudio;
+
+    private void Start()
+    {
+        coinAudio = gameObject.GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            coinAnimator.SetBool("isTouched", true);            
+            coinAnimator.SetBool("isTouched", true);
+            coinAudio.Play();
             StartCoroutine("destroyer");
         }
     }

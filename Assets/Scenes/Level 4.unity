@@ -23384,7 +23384,7 @@ GameObject:
   - component: {fileID: 1129689445}
   m_Layer: 0
   m_Name: moss rock 08.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23618,7 +23618,7 @@ GameObject:
   - component: {fileID: 2106787331}
   m_Layer: 0
   m_Name: start floor.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23660,7 +23660,7 @@ GameObject:
   - component: {fileID: 1672941857}
   m_Layer: 0
   m_Name: moss rock 08.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24241,7 +24241,7 @@ GameObject:
   - component: {fileID: 1031331472}
   m_Layer: 3
   m_Name: Cube.023_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24609,7 +24609,7 @@ GameObject:
   - component: {fileID: 623264072}
   m_Layer: 3
   m_Name: Cube.020_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24678,7 +24678,7 @@ GameObject:
   - component: {fileID: 1464046412}
   m_Layer: 0
   m_Name: moss rock 14.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25002,7 +25002,7 @@ GameObject:
   - component: {fileID: 1622607671}
   m_Layer: 0
   m_Name: moss rock 09.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25030,7 +25030,7 @@ GameObject:
   - component: {fileID: 1316308978}
   m_Layer: 3
   m_Name: Cube.030_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25192,7 +25192,7 @@ GameObject:
   - component: {fileID: 1507243252}
   m_Layer: 3
   m_Name: Cube.022_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25599,7 +25599,7 @@ GameObject:
   - component: {fileID: 1221931638}
   m_Layer: 3
   m_Name: Cube.001_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26098,7 +26098,7 @@ GameObject:
   - component: {fileID: 2139275531}
   m_Layer: 0
   m_Name: start floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26268,7 +26268,7 @@ GameObject:
   - component: {fileID: 34577424}
   m_Layer: 0
   m_Name: moss rock 12.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26357,7 +26357,7 @@ GameObject:
   - component: {fileID: 102711930}
   m_Layer: 3
   m_Name: Cube.027_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26527,7 +26527,7 @@ GameObject:
   - component: {fileID: 765704012}
   m_Layer: 0
   m_Name: moss rock 11.006
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26672,7 +26672,7 @@ GameObject:
   - component: {fileID: 678986835}
   m_Layer: 0
   m_Name: moss rock 10.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27342,7 +27342,7 @@ GameObject:
   - component: {fileID: 29125147}
   m_Layer: 3
   m_Name: Cube.025_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27362,7 +27362,7 @@ GameObject:
   - component: {fileID: 1133260381}
   m_Layer: 3
   m_Name: Cube.001_dmg.003
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27453,7 +27453,7 @@ GameObject:
   - component: {fileID: 1063272117}
   m_Layer: 0
   m_Name: moss rock 12.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28316,7 +28316,7 @@ GameObject:
   - component: {fileID: 1199158384}
   m_Layer: 3
   m_Name: Cube.002_dmg.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28335,7 +28335,7 @@ GameObject:
   - component: {fileID: 1849043819}
   m_Layer: 0
   m_Name: moss rock 10.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28639,7 +28639,7 @@ GameObject:
   - component: {fileID: 782750378}
   m_Layer: 0
   m_Name: moss rock 14.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28716,7 +28716,7 @@ GameObject:
   - component: {fileID: 1201630442}
   m_Layer: 3
   m_Name: Cube.033_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29010,7 +29010,7 @@ GameObject:
   - component: {fileID: 1225588178}
   m_Layer: 0
   m_Name: moss rock 08.006
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29186,7 +29186,7 @@ GameObject:
   - component: {fileID: 1346552695}
   m_Layer: 3
   m_Name: Cube.003_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29255,7 +29255,7 @@ GameObject:
   - component: {fileID: 1914624353}
   m_Layer: 0
   m_Name: moss rock 08.007
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29534,7 +29534,7 @@ GameObject:
   - component: {fileID: 77207053}
   m_Layer: 3
   m_Name: Cube.001_dmg.002
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29553,7 +29553,7 @@ GameObject:
   - component: {fileID: 1544506249}
   m_Layer: 0
   m_Name: moss rock 13.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29710,7 +29710,7 @@ GameObject:
   - component: {fileID: 1193831223}
   m_Layer: 3
   m_Name: Cube.019_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29764,7 +29764,7 @@ GameObject:
   - component: {fileID: 1012888022}
   m_Layer: 3
   m_Name: Cube.005_dmg
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31610,7 +31610,7 @@ GameObject:
   - component: {fileID: 1116013748}
   m_Layer: 3
   m_Name: Cube.001_dmg.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

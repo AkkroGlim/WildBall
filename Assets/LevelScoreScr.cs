@@ -44,7 +44,7 @@ namespace One
 
     public static class NeedLevelValue
     {
-        private static int[] levelPrice = new int[5] { 0, 1, 3, 7, 0};
+        private static int[] levelPrice = new int[5] { 0, 1, 3, 7, 12};
 
 
         public static int GetLevelPriceForLevels()
