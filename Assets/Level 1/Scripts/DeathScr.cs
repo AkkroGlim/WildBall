@@ -41,8 +41,7 @@ public class DeathScr : MonoBehaviour
         if (restartMenu.gameObject.activeSelf && !escMenu.gameObject.activeSelf && !settingsMenu.gameObject.activeSelf)
         {
             isRPress = Input.GetKeyDown(KeyCode.R);
-        }
-
+        }      
     }
     private void OnTriggerStay(Collider other)
     {
