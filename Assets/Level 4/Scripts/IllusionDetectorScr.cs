@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class IllusionDetectorScr : MonoBehaviour
 {
-    
 
-    private void OnCollisionEnter(Collision collision)
+
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.layer == 3)
+        if (other.tag.Equals("Player"))
         {
-            MirageLogic tomb = collision.transform.GetComponent<MirageLogic>();
-            tomb.Illusion();           
+            MirageLogic tomb = transform.GetComponentInParent<MirageLogic>();
+            tomb.Illusion();
         }
     }
 
