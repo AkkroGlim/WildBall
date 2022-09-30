@@ -1577,9 +1577,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1043073013}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 0
+  m_MaxValue: -7
   m_WholeNumbers: 1
-  m_Value: -0
+  m_Value: -7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2720,7 +2720,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 0
   m_WholeNumbers: 1
-  m_Value: -0
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4099,9 +4099,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 756850895}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 0
+  m_MaxValue: -10
   m_WholeNumbers: 1
-  m_Value: -0
+  m_Value: -10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -10024,6 +10024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6969562358568308063, guid: 20877fb41878b624bb4341927acf6a19, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2d0cfd45d264b44c9118a6e31788836, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20877fb41878b624bb4341927acf6a19, type: 3}
 --- !u!4 &7466921027346179543
