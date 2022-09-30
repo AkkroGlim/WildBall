@@ -10,10 +10,8 @@ public class IllusionDetectorScr : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
-            Debug.Log("Украинская бимба");
             MirageLogic tomb = collision.transform.GetComponent<MirageLogic>();
-            tomb.Illusion();
-            
+            tomb.Illusion();           
         }
     }
 

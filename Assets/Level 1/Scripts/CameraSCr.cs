@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class CameraSCr : MonoBehaviour
@@ -34,6 +35,7 @@ public class CameraSCr : MonoBehaviour
         {
             float yPivot = Input.GetAxis("Mouse X") * 600 * Time.fixedDeltaTime;
             float xPivot = Input.GetAxis("Mouse Y") * 600 * Time.fixedDeltaTime;
+            
             yRotation += yPivot;
             xRotation -= xPivot;
             xRotation = Mathf.Clamp(xRotation, -30f, 30f);

@@ -14,16 +14,23 @@ public class DeathScr : MonoBehaviour
     private static int deathCount = 1;
     private float timeCount;
     private bool isRestartActive;
+    private Vector3 startPlayerTransform;
+    private Transform player;
+    private Transform playerParent;
     private void Awake()
     {
         mainMenu = GameObject.Find("GameMenu");
         restartMenu = mainMenu.transform.GetChild(2);
         escMenu = mainMenu.transform.GetChild(0);
         settingsMenu = mainMenu.transform.GetChild(1);
+        
     }
 
     private void Start()
     {
+        startPlayerTransform = GameObject.Find("PlayerBody").transform.localPosition;
+        player = GameObject.Find("PlayerBody").GetComponent<Transform>();
+        playerParent = GameObject.Find("Player").GetComponent<Transform>();
         TabletActivate();
     }
 
@@ -51,13 +58,25 @@ public class DeathScr : MonoBehaviour
     IEnumerator RestartScene()
     {
         yield return new WaitWhile(() => isRPress != true);
-
-        Debug.Log(deathCount);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-        deathCount++;
-        Time.timeScale = 1;
-        restartMenu.gameObject.SetActive(false);
+        if(SceneManager.GetActiveScene().name.Equals("Level 4"))
+        {
+            playerParent.SetParent(null);
+            player.localPosition = startPlayerTransform;
+            deathCount++;
+            isRPress = false;
+            Time.timeScale = 1;
+            restartMenu.gameObject.SetActive(false);
+            isRestartActive = false;
+        }
+        else
+        {
+            Debug.Log(deathCount);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            deathCount++;
+            Time.timeScale = 1;
+            restartMenu.gameObject.SetActive(false);
+        }
+        
     }
 
     public int GetTry()
@@ -82,7 +101,7 @@ public class DeathScr : MonoBehaviour
 
     private void TabletActivate()
     {
-        if(deathCount > 10)
+        if(deathCount > 5)
         {
             GameObject tablet = GameObject.FindGameObjectWithTag("Tablet");
             tablet.transform.GetChild(0).gameObject.SetActive(true);
