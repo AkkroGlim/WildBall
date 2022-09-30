@@ -65,7 +65,7 @@ public class MusicScr : MonoBehaviour
     {
         compliteMenu = GameObject.FindGameObjectWithTag("CompliteMenu");
 
-        if (!SceneManager.GetActiveScene().name.Equals("MainMenu") && LevelStats.GetCoinsFromLevel(2) != 0 && Input.GetKeyDown(KeyCode.Tab) && isMenusActive() == false && compliteMenu == null)
+        if (!SceneManager.GetActiveScene().name.Equals("MainMenu") && LevelStats.GetCoinsFromLevel(4) != 0 && Input.GetKeyDown(KeyCode.Tab) && isMenusActive() == false && compliteMenu == null)
         {
             musicMenu.SetActive(!musicMenu.activeSelf);
             if (musicMenu.activeSelf)
