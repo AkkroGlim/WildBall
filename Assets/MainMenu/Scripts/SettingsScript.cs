@@ -12,7 +12,9 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] private Dropdown dropdownResolution;
     [SerializeField] private Dropdown dropdownQuality;
     [SerializeField] private Toggle isFullScreenTogle;
-    
+    private int previousWidth;
+    private int previousHeight;
+
 
 
     public void Awake()
@@ -21,7 +23,16 @@ public class SettingsScript : MonoBehaviour
         rsl = Screen.resolutions;
         foreach (var i in rsl)
         {
-            resolutions.Add(i.width + "x" + i.height);
+            if(i.width == previousWidth && i.height == previousHeight)
+            {
+            }
+            else
+            {
+                resolutions.Add(i.width + "x" + i.height);
+            }
+            
+            previousWidth = i.width;
+            previousHeight = i.height;
         }
         dropdownResolution.ClearOptions();
         dropdownResolution.AddOptions(resolutions);
