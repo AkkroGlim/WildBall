@@ -22,15 +22,8 @@ public class SettingsScript : MonoBehaviour
         resolutions = new List<string>();
         rsl = Screen.resolutions;
         foreach (var i in rsl)
-        {
-            if(i.width == previousWidth && i.height == previousHeight)
-            {
-            }
-            else
-            {
-                resolutions.Add(i.width + "x" + i.height);
-            }
-            
+        {           
+            resolutions.Add(i.width + "x" + i.height + " " + i.refreshRate + "Hz");
             previousWidth = i.width;
             previousHeight = i.height;
         }
